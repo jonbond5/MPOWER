@@ -9,12 +9,11 @@ class Data:
     def __init__(self, file_string):
         self.file_string = file_string
         self.data = pd.read_csv(SIO(self.file_string))
-        self.columns = self.data.keys()
+        self.columns = list(self.data.columns.values)
 
     def getData(self):
         return self.data
 
     def getColumns(self):
         return self.columns
-        
-    def 
+
